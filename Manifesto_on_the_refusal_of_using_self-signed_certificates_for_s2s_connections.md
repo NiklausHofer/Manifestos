@@ -6,15 +6,6 @@ In the past, the certificates were worth the money. In the past, obtaining certi
 Currently, certificates have become free and anyone can get them. We believe that the time has come to stop supporting self-signed certificates to increase user security.
 
 
-**Ejabberd (ejabberd.yml)**
-```
-s2s_use_starttls: required
-```
-Change to
-```
-s2s_use_starttls: required_trusted
-```
-
 ## Servers in this list pledge not to accept connections with self-signed certificates.
 
 - [404.city](https://404.city)
@@ -30,7 +21,7 @@ Servers that fail to verify certificates in cross-server connections
 Servers that accepted the manifest, but did not use it
 
 
-### Setup Instructions
+## Setup Instructions
 
 
 **Warning!** Remember the correct cipher list, otherwise you will not be able to connect to the servers.
@@ -41,9 +32,27 @@ Do not try to enumerate ciphers yourself, because certificates can be used in th
 'TLS_CIPHERS': "HIGH:!aNULL:!eNULL:!3DES:@STRENGTH"
 ```
 **Wrong:**
+
 This set includes **ECC (ECDHE-ECDSA) and RSA (ECDHE-RSA)** ciphers. This is right now, but will not work in the future!
 In the future, new ciphers will appear and the setting will be incorrect. To upgrade the certificate class, use the ECC certificate instead of RSA, and not guessing with cipher suites!
  ```
  'TLS_CIPHERS': "ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-CAMELLIA256-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA"
 
  ```
+ 
+**Ejabberd (ejabberd.yml)**
+```
+s2s_use_starttls: required
+```
+Change to
+```
+s2s_use_starttls: required_trusted
+```
+
+
+## Feedback
+
+XMPP: support@404.city
+
+If you have a public server, you can include it in an independent server list.
+
