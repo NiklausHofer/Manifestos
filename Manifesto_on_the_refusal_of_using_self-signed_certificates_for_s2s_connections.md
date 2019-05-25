@@ -53,6 +53,3 @@ s2s_use_starttls: required_trusted
 ## Feedback
 
 XMPP: support@404.city
-
-If you have a public server, you can include it in an independent server list.
-
