@@ -5,6 +5,8 @@ In the past, the certificates were worth the money. In the past, obtaining certi
 
 Currently, certificates have become free and anyone can get them. We believe that the time has come to stop supporting self-signed certificates to increase user security.
 
+https://github.com/E-404/Manifestos/blob/master/Manifesto_on_the_refusal_of_using_self-signed_certificates_for_s2s_connections.md#setup-instructions
+
 
 ## Servers in this list pledge not to accept connections with self-signed certificates.
 
