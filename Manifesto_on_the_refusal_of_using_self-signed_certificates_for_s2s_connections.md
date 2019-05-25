@@ -53,3 +53,4 @@ s2s_use_starttls: required_trusted
 ## Feedback
 
 XMPP: support@404.city
+Connection test XMPP echo contact: echo.404.city
