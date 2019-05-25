@@ -56,7 +56,7 @@ XMPP contact:
 ```
 support@404.city
 ```
-Connection test XMPP echo contact (sends back messages to [Gajim](https://gajim.org) ): 
+Connection test. XMPP echo contact (sends back messages to [Gajim](https://gajim.org) ): 
 ```
 echo.404.city
 ```
